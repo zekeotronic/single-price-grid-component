@@ -165,6 +165,10 @@ main #bottom #right .white-mask {
   z-index: 999;
   border-radius: 0 0 8px 8px;
 }
+footer {
+  position: absolute;
+  bottom: 0;
+}
 
 .attribution {
   font-size: 11px;
@@ -172,4 +176,35 @@ main #bottom #right .white-mask {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 650px) {
+  main {
+    width: 90%;
+    height: 90%;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  main #bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  main #bottom #right {
+    position: relative;
+  }
+
+  main #bottom #right h2 {
+    position: static;
+    padding-left: 24px;
+    padding-top: 24px;
+  }
+
+  main #bottom #right #why-text-box {
+    position: static;
+    padding-left: 24px;
+    padding-bottom: 24px;
+  }
+
+  footer {
+    display: none;
+  }
 }
